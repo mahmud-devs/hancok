@@ -1,0 +1,963 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+    --primary_color: #121212;
+    --secondery_color: #191919;
+    --text_color: #fff;
+    --pink: #ff4655;
+    --menu_color: #ddd;
+    --box_color: #212121;
+    --oswald: "Oswald", sans-serif;
+    --barlow: "Barlow Condensed", sans-serif;
+}
+
+/* =====================
+    common css start
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+img {
+    vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+p,
+img,
+div {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+/* =====================
+    common css end
+========================= */
+
+/* =====================
+    nav css start
+========================= */
+
+nav {
+    padding: 25px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu__left {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+}
+.menu__list ul {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.menu__list__item a {
+    color: var(--menu_color);
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: all linear 0.2s;
+}
+.menu__list__item a:hover {
+    color: var(--pink);
+}
+.menu__icon {
+    display: flex;
+    column-gap: 26px;
+    align-items: center;
+}
+.menu__icon__item {
+    font-size: 18px;
+    color: var(--text_color);
+}
+.sign--in {
+    color: var(--text_color);
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(-3px);
+}
+.sign--in i {
+    margin-right: 7px;
+}
+
+/* =====================
+    nav css end
+========================= */
+
+/* =====================
+    banner css start
+========================= */
+#banner_part {
+    background: url(../images/banner.png) center no-repeat;
+    background-size: cover;
+    padding: 330px 0 103px;
+}
+
+.banner__subtitle {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+}
+.banner__title {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+}
+.banner__title::after {
+    content: "";
+    position: absolute;
+    left: 520px;
+    bottom: 15px;
+    width: 90px;
+    height: 4px;
+    background: var(--text_color);
+}
+
+.banner__summary {
+    color: var(--text_color);
+    max-width: 525px;
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+.banner__button {
+    color: var(--primary_color);
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 13px 24px;
+    border: none;
+    background-color: var(--text_color);
+    transition: all linear 0.3s;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.banner__button i {
+    color: var(--pink);
+    margin-left: 7px;
+    transition: all linear 0.3s;
+}
+.banner__button:hover {
+    background-color: var(--pink);
+    color: var(--text_color);
+}
+.banner__button:hover i {
+    color: var(--text_color);
+}
+
+.banner__icon {
+    margin-top: 301px;
+    display: flex;
+    column-gap: 20px;
+}
+.banner__icon__item {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text_color);
+    color: var(--pink);
+    font-style: 18px;
+    transition: ease-in-out 0.3s;
+}
+.banner__icon__item:hover {
+    background-color: var(--pink);
+    color: var(--text_color);
+    transform: translateY(-10px);
+}
+
+/* =====================
+    banner css end
+========================= */
+
+/* =====================
+    about css start
+========================= */
+#about_part {
+    padding: 34px 0 82px;
+    background: var(--primary_color);
+}
+
+.about__title {
+    color: var(--text_color);
+    position: relative;
+    font-family: var(--oswald);
+    font-size: 38px;
+    max-width: 520px;
+    font-weight: 600;
+    letter-spacing: 2.66px;
+    margin-bottom: 64px;
+}
+.about__title::after {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 3px;
+    background-color: var(--pink);
+    left: 215px;
+    bottom: 9px;
+}
+.aboutDetail {
+    display: flex;
+    align-items: center;
+    column-gap: 82px;
+    margin-bottom: 50px;
+}
+.leftSide {
+    position: relative;
+    z-index: 999;
+}
+.leftSide::before {
+    position: absolute;
+    content: "";
+    width: 160px;
+    height: 160px;
+    background: var(--pink);
+    left: -7px;
+    top: -7px;
+    z-index: -1;
+}
+
+.rightSide__title {
+    color: var(--text_color);
+    margin-bottom: 10px;
+    font-family: var(--oswald);
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.81px;
+}
+
+.list__item {
+    color: var(--text_color);
+    margin-bottom: 13px;
+    font-family: var(--barlow);
+    font-size: 18px;
+    font-weight: 400;
+}
+.list__item i {
+    margin-right: 10px;
+    color: var(--pink);
+}
+.rightSide__description {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 13px;
+}
+.rightSide__button {
+    padding: 13px 24px;
+    padding-right: 14px;
+    background: #212121;
+    color: var(--pink);
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    transition: all linear 0.3s;
+    border-radius: 4px;
+}
+.rightSide__button:hover {
+    background: var(--pink);
+    color: var(--text_color);
+}
+.rightSide__button i {
+    margin-left: 5px;
+    transition: all linear 0.3s;
+}
+
+.count {
+    display: flex;
+    column-gap: 20px;
+}
+.count__item {
+    width: 315px;
+    background: var(--box_color);
+    border-radius: 0 50px;
+    padding: 26px 0 33px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item_title {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    position: relative;
+}
+.item_title::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    bottom: 13px;
+    right: -18px;
+    background: var(--pink);
+}
+.item_description {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.36px;
+}
+/* =====================
+    about css end
+========================= */
+
+/* =====================
+    games css start
+========================= */
+#game_part {
+    padding: 115px 0 90px;
+    background: var(--secondery_color);
+}
+.game__heading {
+    display: flex;
+    justify-content: end;
+}
+.game__heading__title {
+    color: var(--text_color);
+    text-align: end;
+    font-family: var(--barlow);
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 2.66px;
+    max-width: 460px;
+    position: relative;
+    margin-bottom: 80px;
+}
+.game__heading__title::before {
+    position: absolute;
+    content: "";
+    right: 125px;
+    bottom: 7px;
+    width: 120px;
+    height: 3px;
+    background: var(--pink);
+}
+
+.game__character {
+    display: flex;
+    column-gap: 20px;
+    align-items: end;
+}
+.game__character__left {
+    position: relative;
+    /* width: 651px;
+	height: 400px;
+	background: var(--pink);
+	clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%); */
+}
+.character__left {
+    width: 651px;
+    height: 390px;
+    background: var(--pink);
+    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+    border-radius: 10px;
+}
+
+.valorant {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+.character__right {
+    position: relative;
+}
+.gameIcon {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.gameIcon__item {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--text_color);
+    color: var(--text_color);
+    transition: all linear 0.3s;
+}
+.gameIcon__item:hover {
+    background: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+/* =====================
+    games css end
+========================= */
+
+/* =====================
+    live css end
+========================= */
+
+#live_part {
+    padding: 90px 0 30px;
+    background: var(--primary_color);
+}
+.liveHeading__title {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 38px;
+    max-width: 450px;
+    margin-bottom: 80px;
+    font-weight: 600;
+    letter-spacing: 2.66px;
+    position: relative;
+}
+.liveHeading__title::after {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 3px;
+    background: var(--pink);
+    right: 165px;
+    bottom: 10px;
+}
+
+.movie {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.movie__item {
+    position: relative;
+    width: 426px;
+}
+.movie__img {
+    width: 100%;
+    filter: grayscale(1);
+}
+.img--gray {
+    filter: grayscale(0);
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 195px 25px 25px;
+    color: var(--text_color);
+}
+.overlay__play {
+    width: 70px;
+    height: 70px;
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--text_color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all linear 0.3s;
+}
+.overlay__play:hover {
+    background: var(--pink);
+    border: 2px solid var(--pink);
+    color: var(--text_color);
+}
+
+.overlay__title {
+    font-family: var(--barlow);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.overlayDescription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.overlayDescription__left {
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.96px;
+}
+.overlayDescription__right {
+    position: relative;
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+}
+.overlayDescription__right::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--pink);
+    left: -12px;
+    bottom: 5px;
+    border-radius: 50%;
+}
+
+.match {
+    padding-top: 60px;
+}
+.match__title {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 500;
+    letter-spacing: 2.25px;
+}
+.matchBox {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.matchBox__left {
+    width: 425px;
+    background: var(--box_color);
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
+    padding: 10px 10px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    transition: all linear 0.3s;
+}
+
+.matchBox__left:hover {
+    background: var(--pink);
+    cursor: pointer;
+}
+.matchBox__left__name {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+}
+.matchBox__counter {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+.matchBox__right {
+    width: 425px;
+    background: var(--box_color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 120px;
+    padding: 10px 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    transition: all linear 0.3s;
+}
+.matchBox__right:hover {
+    background: var(--pink);
+    cursor: pointer;
+}
+
+.matchBox__right__name {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+}
+
+/* =====================
+    live css end
+========================= */
+
+/* =====================
+    sale css start
+========================= */
+
+#sale_part {
+    padding: 90px 0 30px;
+    background: var(--secondery_color);
+}
+
+.sale__heading {
+    display: flex;
+    justify-content: end;
+}
+.sale__title {
+    color: var(--text_color);
+    text-align: end;
+    font-family: var(--barlow);
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 2.66px;
+    max-width: 460px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.sale__title::before {
+    position: absolute;
+    content: "";
+    right: 125px;
+    bottom: 7px;
+    width: 120px;
+    height: 3px;
+    background: var(--pink);
+}
+
+.sale {
+    display: flex;
+    justify-content: space-between;
+}
+.saleItem {
+    position: relative;
+}
+.saleItem__icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--text_color);
+    background: var(--secondery_color);
+    color: var(--text_color);
+    transition: all linear 0.2s;
+}
+.saleItem__icon:hover {
+    background: var(--pink);
+    border: 1px solid var(--pink);
+}
+.saleItem__name {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 22px;
+    margin: 18px 0 20px;
+    font-weight: 600;
+    letter-spacing: 1.54px;
+}
+
+.saleItem__studio {
+    color: #666;
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1.6px;
+}
+.saleItem__price {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.price__1st {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+    background: var(--pink);
+}
+
+.price__2nd {
+    color: #666;
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: line-through;
+    letter-spacing: 0.96px;
+}
+.price__3rd {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 400;
+}
+.sale__subtitle {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 20px;
+    margin-top: 65px;
+    font-weight: 500;
+}
+
+/* =====================
+    sale css end
+========================= */
+
+/* =====================
+    catalog css start
+========================= */
+
+#catalog_part {
+    background: var(--secondery_color);
+    padding-bottom: 90px;
+}
+.catalogWrapper {
+    display: flex;
+    padding: 44px;
+    background: var(--box_color);
+    column-gap: 135px;
+}
+
+.text__title {
+    color: var(--pink);
+    font-family: var(--oswald);
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+}
+.text__subtitle {
+    color: var(--text_color);
+    font-family: var(--barlow);
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 580px;
+    margin-bottom: 16px;
+}
+
+.text__summary {
+    color: #666;
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    width: 605px;
+}
+.text__btn {
+    color: var(--text_color);
+    font-family: var(--oswald);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 13px 30px 15px;
+    background: var(--primary_color);
+    transition: all linear 0.3s;
+    padding-right: 20px;
+}
+.text__btn i {
+    margin-left: 7px;
+    color: var(--pink);
+}
+.text__btn:hover {
+    background: var(--pink);
+    color: var(--text_color);
+    border-radius: 5px;
+}
+.text__btn:hover i {
+    color: var(--text_color);
+}
+.allImages {
+    width: 425px;
+    height: 370px;
+    position: relative;
+}
+.allImages__img {
+    width: 100%;
+    height: 100%;
+}
+.allImages__one {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 305px;
+    width: 209px;
+}
+.allImages__two {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 305px;
+    width: 209px;
+}
+.allImages__three {
+    position: absolute;
+    left: 37px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 330px;
+    width: 219px;
+}
+.allImages__four {
+    position: absolute;
+    right: 37px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 330px;
+    width: 219px;
+}
+.allImages__five {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 370px;
+}
+
+/* =====================
+    catalog css end
+========================= */
+
+/* =====================
+    accesories css start
+========================= */
+#accesories_part {
+    padding: 90px 0 87px;
+    background: var(--primary_color);
+}
+.accesories--title::after {
+    right: 100px;
+}
+.accesories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.accesories::before {
+    position: absolute;
+    content: "\f053";
+    font-family: FontAwesome;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--pink);
+    border: 1px solid var(--text_color);
+    cursor: pointer;
+}
+.accesories::after {
+    position: absolute;
+    content: "\f054";
+    font-family: FontAwesome;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--pink);
+    border: 1px solid var(--text_color);
+    cursor: pointer;
+}
+
+.accesories__item {
+    width: 315px;
+    height: 470px;
+    text-align: center;
+    padding: 37px 24px;
+    background: var(--box_color);
+    font-family: var(--oswald);
+    color: var(--text_color);
+    transition: all linear 0.3s;
+}
+.accesories__item:hover {
+    cursor: pointer;
+    background: var(--pink);
+}
+
+.item__price {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.item__gamingproductImg {
+    width: 100%;
+}
+.item__gamingTitle {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px 0 10px;
+}
+
+.item__cart {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--pink);
+    text-transform: uppercase;
+    transition: all linear 0.3s;
+}
+.accesories__item:hover .item__cart {
+    color: var(--primary_color);
+}
+
+/* =====================
+    accesories css end
+========================= */
